@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: ai-voice-api
+    env: docker
+    plan: standard
+    region: oregon
+    envVars:
+      - key: SECRET_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: STORAGE_BACKEND
+        sync: false
+      - key: STORAGE_LOCAL_DIR
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_DEFAULT_REGION
+        sync: false
+      - key: S3_BUCKET_NAME
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: TTS_MODEL_NAME
+        value: tts_models/multilingual/multi-dataset/xtts_v2
+      - key: DEVICE
+        value: cpu
